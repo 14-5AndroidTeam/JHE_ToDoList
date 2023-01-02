@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/app"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:text="To-Do List"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="42dp"
+        android:padding="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+<!--    <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--        android:id="@+id/search"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:layout_marginLeft="17dp"-->
+<!--        android:layout_marginRight="17dp"-->
+<!--        android:background="@drawable/todo_bg"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:gravity="center_vertical"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/app" >-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:src="@drawable/search"-->
+<!--            android:layout_marginTop="14dp"-->
+<!--            android:layout_marginBottom="12dp"-->
+<!--            android:layout_marginLeft="24dp"-->
+<!--            android:layout_marginRight="12dp" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/search_editText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="검색"-->
+<!--            android:textColorHint="#5a5a5a"-->
+<!--            android:textSize="18dp" />-->
+
+
+<!--    </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/app"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="17dp"
+        android:paddingTop="70dp"
+        android:layout_marginLeft="17dp" />
+
+    <ImageView
+        android:id="@+id/write"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="31dp"
+        android:layout_marginBottom="31dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/add_bg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
